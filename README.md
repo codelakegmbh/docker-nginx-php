@@ -34,7 +34,9 @@ The container exposes port `80` and `443`.
 Therefore it requires SSL certificates to be present in the container folder `/srv/cert`.
 In case you have to generate certificates you can do so on GNU/Linux by using the `openssl` package.
 ```
-openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /some/directory/privkey.pem -out /some/directory/fullchain.pem -outform PEM
+openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
+  -keyout /some/directory/privkey.pem \
+  -out /some/directory/fullchain.pem -outform PEM
 ```
 This will generate the required certificates in the needed PEM format.
 
@@ -52,5 +54,10 @@ $ exit
 
 So, here is a template for the container creation command:
 ```
-docker run --name <containe-name> -p <HTTP-host-port>:80 -p <HTTPS-host-port>:443 -v <certificate-path>:/srv/cert -v <app-path>:/srv/http -d codelake/nginx-php
+docker run --name <containe-name> \
+  -p <HTTP-host-port>:80 \
+  -p <HTTPS-host-port>:443 \
+  -v <certificate-path>:/srv/cert \
+  -v <app-path>:/srv/http \
+  -d codelake/nginx-php
 ```
