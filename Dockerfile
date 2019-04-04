@@ -26,5 +26,6 @@ RUN rm /etc/nginx/conf.d/default.conf
 RUN mkdir /run/nginx
 
 EXPOSE 443
+EXPOSE 80
 
 CMD ["/bin/sh", "/root/startup.sh"]
