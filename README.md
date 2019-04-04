@@ -9,6 +9,7 @@ you can also run those apps in this container.
 ## Content
 * [Usage](#usage)
   * [Image Building](#image-building)
+  * [Image Pulling](#image-pulling)
   * [Container creation](#container-creation)
 
 ## Usage
@@ -21,6 +22,12 @@ This can easily be done with the following command:
 docker image build . -t codelake/nginx-php
 ```
 After completion you can create containers from the image `codelake/nginx-php`.
+
+### Image Pulling
+In case you do not want to build the image yourself but pull it instead,
+you can do so by using the command `docker pull codelake/nginx-php`.
+For more information about the builds, please check out the
+[docker hub page](https://hub.docker.com/r/codelake/nginx-php) of this repository.
 
 ### Container creation
 The container exposes port `80` and `443`.
