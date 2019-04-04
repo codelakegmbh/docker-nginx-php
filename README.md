@@ -1,8 +1,10 @@
 # docker-nginx-php
-This image is built for PHP applications which use pretty URLs (like you do in [Laravel](https://laravel.com/) projects).
+This image is built for PHP applications which use pretty URLs
+(like you do in [Laravel](https://laravel.com/) projects).
 The underlying nginx also serves static assets.
 
-At the moment, there is a little issue regarding assets delivery (if explicitly provided in the URL, PHP scripts may be downloaded).
+In case your application does not rely on pretty URLs but on actual script names,
+you can also run those apps in this container.
 
 ## Content
 * [Usage](#usage)
