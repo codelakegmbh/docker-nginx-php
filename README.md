@@ -1,16 +1,17 @@
-# docker-nginx-php
-This image is built for PHP applications which use pretty URLs
-(like you do in [Laravel](https://laravel.com/) projects).
-The underlying nginx also serves static assets.
-
-In case your application does not rely on pretty URLs but on actual script names,
-you can also run those apps in this container.
-
-## Content
+# Content
+* [About](#about)
 * [Usage](#usage)
   * [Image Building](#image-building)
   * [Image Pulling](#image-pulling)
   * [Container creation](#container-creation)
+
+## About
+This image base on [alpine](https://docs.docker.com/samples/library/alpine/)
+an built for PHP applications which use pretty URLs
+(like you do in [Laravel](https://laravel.com/) projects).
+
+In case your application does not rely on pretty URLs but on actual script names,
+you can also run those apps in container based on this image.
 
 ## Usage
 
