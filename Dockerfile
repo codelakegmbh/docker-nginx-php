@@ -15,6 +15,7 @@ RUN apk add \
   php-mbstring \
   php-xml \
   php-zip \
+  openssl \
   nginx
 
 RUN rm /etc/nginx/conf.d/default.conf
