@@ -41,6 +41,9 @@ openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
 ```
 This will generate the required certificates in the needed PEM format.
 
+__NOTE:__ If you do not provide the key and the certificate on your own the startup script
+will clear the certificate folder and generate the certificate files on its own.
+
 Your application folder should be linked to `/srv/http`.
 In case your app features an explicit `public` folder you should link you app folder to `/srv/app`
 and the create a symbolic link from your app's public directory to the http directory.
